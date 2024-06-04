@@ -1,3 +1,7 @@
+:root {
+    --primary-color: #047aed;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -5,7 +9,7 @@
 body {
     font-family: "Lato", sans-serif;
     color: #333;
-    line-height: 3.6;
+    line-height: 1.6;
 }
 
 h1,
@@ -35,14 +39,16 @@ N A V B A R
 */
 
 .navbar {
-    background-color: #047aed;
+    background-color: var(--primary-color);
     color: #fff;
     height: 70px;
 }
 
 .navbar ul{
     display: flex;
-}.navbar .flex {
+}
+
+.navbar .flex {
     justify-content: space-between;
 }
 
@@ -55,21 +61,121 @@ N A V B A R
 .navbar a:hover {
     border-bottom:  2px solid #fff;
 }
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    overflow: auto;
-    padding: 0 40px;
-}
 
 .navbar .flex {
     justify-content: space-between;
 }
 
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%
+/* 
+===========================================================
+
+S H O W C A S E
+
+===========================================================
+*/
+
+.showcase{
+    height: 400px;
+    background-color: var(--primary-color);
+    color: #fff;
+    position: relative;
 }
 
+.showcase h1{
+    font-size: 40px;
+}
+
+.showcase p {
+    margin: 20px 0;
+}
+
+.showcase .grid {
+    grid-template-columns: 50% 40%;
+    overflow: visible;
+    gap: 30px;
+}
+
+.showcase-form {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+}
+
+.showcase-form .form-control{
+    margin: 30px 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.showcase-form input:focus {
+    outline: none;
+}
+
+.showcase::before,
+.showcase::after {
+    content:'';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    transform: skewY(-2deg);
+    -webkit-transform: skewY(-2deg);
+       -moz-transform: skewY(-2deg);
+        -ms-transform: skewY(-2deg);
+}
+
+/* 
+===========================================================
+
+S T A T S
+
+===========================================================
+*/
+
+.stats {
+    padding-top: 100px;
+}
+
+.container .stats-heading {
+    max-width: 500px;
+    margin: auto;
+}
+
+.stats .grid h3 {
+    font-size: 35px;
+}
+
+.stats .grid p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 
+===========================================================
+
+C L I
+
+===========================================================
+*/
+
+.cli .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat (2, 1fr);
+}
+
+.cli .grid > *:first-child {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
