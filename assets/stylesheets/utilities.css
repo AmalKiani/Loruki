@@ -62,6 +62,12 @@ U T I L I T I E S
     color: #fff;
 }
 
+.bg-light,
+.btn-light {
+    background-color: var(--light-color);
+    color: #333;
+}
+
 .bg-primary a,
 .btn-primary a,
 .bg-secondary a, 
@@ -71,10 +77,21 @@ U T I L I T I E S
     color: #fff;
 }
 
-.bg-light,
-.btn-light {
-    background-color: var(--light-color);
-    color: #333;
+/* Text Colors */
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.text-dark {
+    color: var(--dark-color);
+}
+
+.text-light {
+    color: var(--light-color);
 }
 
 /* Text Sizes */
@@ -101,6 +118,29 @@ U T I L I T I E S
 
 .text-center {
     text-align: center;
+}
+
+/* Alert */
+
+.alert {
+    background-color: var(--light-color);
+    padding: 10px 20px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.alert i {
+    margin-right: 10px;
+}
+
+.alert-success{
+    background-color: var(--success-color);
+    color: #fff;
+}
+
+.alert-error {
+    background-color: var(--error-color);
+    color: #fff;
 }
 
 .flex {
