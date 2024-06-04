@@ -194,3 +194,28 @@ C L O U D
 .cloud .grid {
     grid-template-columns: 4fr 3fr;
 }
+
+/* 
+===========================================================
+
+L A N G U A G E S
+
+===========================================================
+*/
+.languages .flex{
+    flex-wrap: wrap;
+}
+.languages .card{
+    text-align: center;
+    margin: 18px 10px;
+    transition: transform 0.2s ease-in;
+}
+
+.languages .card h4 {
+    font-size: 20px;
+    margin-bottom:  10px;
+}
+
+.languages .card:hover {
+    transform: translateY(-15px);
+}
