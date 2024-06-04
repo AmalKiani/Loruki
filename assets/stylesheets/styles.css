@@ -332,7 +332,12 @@ T A B L E T S   &   U N D E R
     .showcase .grid,
     .stats .grid,
     .cli .grid,
-    .cloud .grid {
+    .cloud .grid,
+    .features-head .grid,
+    .features-sub-head .grid,
+    .features-main .grid,
+    .docs-main .grid,
+    .docs-head .grid {
         grid-template-columns:  1fr;
         grid-template-rows: 1fr;
     }
@@ -354,6 +359,23 @@ T A B L E T S   &   U N D E R
     .cli .grid > *:first-child {
         grid-column: 1;
         grid-row: 1;
+    }
+
+    .features-head,
+    .features-sub-head,
+    .docs-head {
+        text-align: center;
+    }
+
+    .features-head img,
+    .features-sub-head img,
+    .docs-head img{
+        justify-self: center;
+    }
+
+    .features-main .grid > *:first-child,
+    .features-main .grid > *:nth-child(2) {
+        grid-column: 1;
     }
 }
 
